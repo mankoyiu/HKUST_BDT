@@ -1,0 +1,1635 @@
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<!--[if lte IE 9]><html class="ie ie9 lte9" lang="en"><![endif]-->
+<!--[if !IE]><!--><html lang="en"><!--<![endif]-->
+<head dir="ltr">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+  <title>
+
+ MSBD5003x Courseware | edX
+</title>
+
+
+  
+
+  <script type="text/javascript" src="https://prod-edx-edxapp-assets.edx-cdn.org/static/js/i18n/en/djangojs.0f66acafc573.js"></script>
+  <script type="text/javascript" src="https://prod-edx-edxapp-assets.edx-cdn.org/static/js/ie11_find_array.67b5a9edd5d5.js"></script>
+  
+  <link rel="icon" type="image/x-icon" href="https://edx-cdn.org/v3/prod/favicon.ico"/>
+
+  
+
+  
+  
+
+    <link href="https://prod-edx-edxapp-assets.edx-cdn.org/static/edx.org-next/css/lms-style-vendor.a44d8153e6e2.css" rel="stylesheet" type="text/css" />
+
+
+
+    
+  
+
+    <link href="https://prod-edx-edxapp-assets.edx-cdn.org/static/edx.org-next/css/lms-main-v1.475e75f517ce.css" rel="stylesheet" type="text/css" />
+
+
+
+
+    
+    
+<script type="text/javascript" src="https://prod-edx-edxapp-assets.edx-cdn.org/static/js/lms-main_vendor.4126ac02965c.js" charset="utf-8"></script>
+
+
+    
+    
+<script type="text/javascript" src="https://prod-edx-edxapp-assets.edx-cdn.org/static/js/lms-application.074dc588ef8a.js" charset="utf-8"></script>
+
+
+
+  
+    
+    
+    <script type="text/javascript" src="https://prod-edx-edxapp-assets.edx-cdn.org/static/bundles/commons.5b0663a1e4e51afc5fb2.02eec8583fd6.js" ></script>
+
+
+
+  <script>
+    window.baseUrl = "https://prod\u002Dedx\u002Dedxapp\u002Dassets.edx\u002Dcdn.org/static/";
+    (function (require) {
+      require.config({
+          baseUrl: window.baseUrl
+      });
+    }).call(this, require || RequireJS.require);
+  </script>
+  <script type="text/javascript" src="https://prod-edx-edxapp-assets.edx-cdn.org/static/lms/js/require-config.30c1582aaf08.js"></script>
+  
+    <script type="text/javascript">
+        (function (require) {
+          require.config({
+              paths: {
+                'course_bookmarks/js/views/bookmark_button': 'course_bookmarks/js/views/bookmark_button.99159f5f5649',
+'js/views/message_banner': 'js/views/message_banner.141974fd4f5d',
+'moment': 'common/js/vendor/moment-with-locales.8afc1b9c35cd',
+'moment-timezone': 'common/js/vendor/moment-timezone-with-data.daaf3159f5d2',
+'js/courseware/course_info_events': 'js/courseware/course_info_events.2fc35b57627f',
+'js/courseware/accordion_events': 'js/courseware/accordion_events.6064c7809de5',
+'js/dateutil_factory': 'js/dateutil_factory.05a361148818',
+'js/courseware/link_clicked_events': 'js/courseware/link_clicked_events',
+'js/courseware/toggle_element_visibility': 'js/courseware/toggle_element_visibility.474ff5ba9de3',
+'js/student_account/logistration_factory': 'js/student_account/logistration_factory.df4e41783d02',
+'js/courseware/courseware_factory': 'js/courseware/courseware_factory.1504fc10caef',
+'js/groups/views/cohorts_dashboard_factory': 'js/groups/views/cohorts_dashboard_factory.f9c69d089f31',
+'js/groups/discussions_management/discussions_dashboard_factory': 'js/discussions_management/views/discussions_dashboard_factory.2e10d9097343',
+'draggabilly': 'js/vendor/draggabilly.26caba6f7187',
+'hls': 'common/js/vendor/hls.0cca9c65a77a'
+            }
+          });
+        }).call(this, require || RequireJS.require);
+    </script>
+  
+
+  
+
+  
+
+    <link href="https://prod-edx-edxapp-assets.edx-cdn.org/static/edx.org-next/css/lms-style-course-vendor.dc9629c68006.css" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+
+    <link href="https://prod-edx-edxapp-assets.edx-cdn.org/static/edx.org-next/css/lms-course.312caa77d462.css" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+
+    <link href="https://prod-edx-edxapp-assets.edx-cdn.org/static/edx.org-next/css/lms-style-student-notes.a35233ec9b00.css" rel="stylesheet" type="text/css" />
+
+
+
+
+<script type="text/javascript" src="https://prod-edx-edxapp-assets.edx-cdn.org/static/js/jquery.autocomplete.964a0bfb4fd2.js" async></script>
+<script type="text/javascript" src="https://prod-edx-edxapp-assets.edx-cdn.org/static/js/src/tooltip_manager.d611f4446ebd.js" async></script>
+
+<link href="https://prod-edx-edxapp-assets.edx-cdn.org/static/css/vendor/jquery.autocomplete.efeb242dd532.css" rel="preload" type="text/css" as="style">
+  <link rel='stylesheet' href='https://prod-edx-edxapp-assets.edx-cdn.org/static/css-builtin-blocks/HtmlBlockDisplay.9c90d3d0d69f.css' type='text/css'>
+<link rel='stylesheet' href='https://prod-edx-edxapp-assets.edx-cdn.org/static/css-builtin-blocks/ProblemBlockDisplay.53d04508efe8.css' type='text/css'>
+
+  <base target="_parent">
+
+<script type="text/javascript">
+  var $$course_id = "course\u002Dv1:HKUSTx+MSBD5003x+2T2024";
+</script>
+
+
+  
+
+  
+
+
+  
+
+
+<script type="application/json" id="user-metadata">
+    null
+</script>
+
+  
+<meta name="robots" content="noindex">
+
+
+  
+
+<script src=https://www.edx.org/optimizelyjs/27831640741.js></script>
+
+  
+
+
+<!-- begin Segment -->
+<script type="text/javascript">
+  // Asynchronously load Segment's analytics.js library
+  !function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","page","once","off","on"];analytics.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);analytics.push(e);return analytics}};for(var t=0;t<analytics.methods.length;t++){var e=analytics.methods[t];analytics[e]=analytics.factory(e)}analytics.load=function(t){var e=document.createElement("script");e.type="text/javascript";e.async=!0;e.src=("https:"===document.location.protocol?"https://":"http://")+"cdn.segment.com/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(e,n)};analytics.SNIPPET_VERSION="3.1.0";
+  analytics.load("DxfS1h06K5HA7CZDMzmsmuni8JBLmI9u");
+  analytics.page();
+  }}();
+  // Note: user tracking moved to segment-io-footer.html
+</script>
+<!-- end Segment -->
+
+
+  <meta name="path_prefix" content="">
+  
+    <meta name="google-site-verification" content="_mipQ4AtZQDNmbtOkwehQDOgCxUUV2fb_C0b6wbiRHY" />
+
+  <meta name="openedx-release-line" content="master" />
+
+
+
+
+
+
+    <script type="text/javascript">
+        (function(b,r,a,n,c,h,_,s,d,k){if(!b[n]||!b[n]._q){for(;s<_.length;)c(h,_[s++]);d=r.createElement(a);d.async=1;d.src="https://cdn.branch.io/branch-latest.min.js";k=r.getElementsByTagName(a)[0];k.parentNode.insertBefore(d,k);b[n]=h}})(window,document,"script","branch",function(b,r){b[r]=function(){b._q.push([r,arguments])}},{_q:[],_v:1},"addListener applyCode banner closeBanner creditHistory credits data deepview deepviewCta first getCode init link logout redeem referrals removeListener sendSMS setBranchViewData setIdentity track validateCode".split(" "), 0);
+        branch.init('key_test_amtw27wsxA2wo5cy7NTROenatBhky0ZU');
+    </script>
+
+<script
+    src='https://www.datadoghq-browser-agent.com/us1/v5/datadog-rum.js'
+    type='text/javascript'>
+</script>
+<script type='text/javascript' src='https://www.datadoghq-browser-agent.com/us1/v5/datadog-logs.js'></script>
+<script>
+    window.DD_RUM && window.DD_RUM.init({
+      clientToken: 'pub1ee3864582232f45641213f62dd052c1',
+      applicationId: '3b57e7e2-9130-4fff-8fe8-f28a7991617e',
+      // `site` refers to the Datadog site parameter of your organization
+      // see https://docs.datadoghq.com/getting_started/site/
+      site: 'datadoghq.com',
+      service: 'edx-edxapp-lms-frontend',
+      env: 'prod',
+      // Specify a version number to identify the deployed version of your application in Datadog
+      version: '1.0.0',
+      sessionSampleRate: 20,
+      sessionReplaySampleRate: 0,
+      trackUserInteractions: true,
+      trackResources: true,
+      trackLongTasks: true,
+      defaultPrivacyLevel: 'mask',
+      enablePrivacyForActionName: true,
+      trackSessionAcrossSubdomains: true,
+      usePartitionedCrossSiteSessionCookie: true,
+    });
+</script>
+<script>
+    window.DD_LOGS &&
+    window.DD_LOGS.init({
+      clientToken: 'pub1ee3864582232f45641213f62dd052c1',
+      site: 'datadoghq.com',
+      forwardErrorsToLogs: true,
+      service: 'edx-edxapp-lms-frontend',
+      sessionSampleRate: 100,
+      env: 'prod',
+      trackSessionAcrossSubdomains: true,
+      usePartitionedCrossSiteSessionCookie: true,
+    })
+</script>
+</head>
+
+<body class="ltr view-in-course view-courseware courseware  lang_en">
+
+
+<div id="page-prompt"></div>
+    
+    <a class="nav-skip sr-only sr-only-focusable" href="#main">Skip to main content</a>
+
+
+    
+
+
+
+
+
+
+
+
+
+
+    <div class="marketing-hero"></div>
+
+    <div class="content-wrapper main-container" id="content" dir="ltr">
+      
+
+
+
+
+
+
+
+
+<script type="text/template" id="image-modal-tpl">
+    <div class="wrapper-modal wrapper-modal-image">
+  <section class="image-link">
+    <%= smallHTML%> <% // xss-lint: disable=underscore-not-escaped %>
+    <a href="#" class="modal-ui-icon action-fullscreen" role="button">
+      <span class="label">
+        <span class="icon fa fa-arrows-alt fa-large" aria-hidden="true"></span> <%- gettext("Fullscreen") %>
+      </span>
+    </a>
+  </section>
+
+  <section class="image-modal">
+    <section class="image-content">
+      <div class="image-wrapper">
+        <img alt="<%- largeALT %>, <%- gettext('Large') %>" src="<%- largeSRC %>" />
+      </div>
+
+      <a href="#" class="modal-ui-icon action-close" role="button">
+        <span class="label">
+          <span class="icon fa fa-remove fa-large" aria-hidden="true"></span> <%- gettext("Close") %>
+        </span>
+      </a>
+
+      <ul class="image-controls">
+        <li class="image-control">
+          <a href="#" class="modal-ui-icon action-zoom-in" role="button">
+            <span class="label">
+              <span class="icon fa fa fa-search-plus fa-large" aria-hidden="true"></span> <%- gettext("Zoom In") %>
+            </span>
+          </a>
+        </li>
+
+        <li class="image-control">
+          <a href="#" class="modal-ui-icon action-zoom-out is-disabled" aria-disabled="true" role="button">
+            <span class="label">
+              <span class="icon fa fa fa-search-minus fa-large" aria-hidden="true"></span> <%- gettext("Zoom Out") %>
+            </span>
+          </a>
+        </li>
+      </ul>
+    </section>
+  </section>
+</div>
+
+</script>
+
+
+
+
+
+
+
+
+
+<div class="course-wrapper chromeless">
+  <section class="course-content" id="course-content"      data-enable-completion-on-view-service="false"     style="display: block; width: auto; margin: 0;"
+  >
+      <main id="main" aria-label="Content">
+        
+<div class="xblock xblock-student_view xblock-student_view-vertical" data-course-id="course-v1:HKUSTx+MSBD5003x+2T2024" data-init="VerticalStudentView" data-runtime-class="LmsRuntime" data-runtime-version="1" data-block-type="vertical" data-usage-id="block-v1:HKUSTx+MSBD5003x+2T2024+type@vertical+block@717a4e781e654eebba7748dd2b128106" data-request-token="b6489190073611f082a609d7570791c2" data-graded="True" data-has-score="False">
+  
+
+
+
+
+
+
+    
+  <div class="vert-due-date">
+    <div class="localized-datetime" data-datetime="2025-01-27 15:59:00+00:00" data-string="Lab due {date}" data-timezone="None"></div>
+      <div class="pill completed">Completed</div>
+  </div>
+
+
+
+<div class="vert-mod">
+    <div class="vert vert-0" data-id="block-v1:HKUSTx+MSBD5003x+2T2024+type@html+block@d97568fbb0634017bede261281d8dd66" id="block-v1:HKUSTx+MSBD5003x+2T2024+type@html+block@d97568fbb0634017bede261281d8dd66">
+        
+<div class="xblock xblock-student_view xblock-student_view-html xmodule_display xmodule_HtmlBlock" data-course-id="course-v1:HKUSTx+MSBD5003x+2T2024" data-init="XBlockToXModuleShim" data-runtime-class="LmsRuntime" data-runtime-version="1" data-block-type="html" data-usage-id="block-v1:HKUSTx+MSBD5003x+2T2024+type@html+block@d97568fbb0634017bede261281d8dd66" data-request-token="b6489190073611f082a609d7570791c2" data-graded="True" data-has-score="False">
+  <script type="json/xblock-args" class="xblock-json-init-args">
+    {"xmodule-type": "HTMLModule"}
+  </script>
+  
+
+
+
+
+
+
+<div id="edx-notes-wrapper-254297147010081184251379095614423311335" class="edx-notes-wrapper">
+    <div class="edx-notes-wrapper-content"><p>Using the example graph from</p>
+<p><a href="https://www.cse.ust.hk/msbd5003/nb/graph.ipynb" class="external" target="_blank" rel="noreferrer noopener"><span>https://www.cse.ust.hk/msbd5003/nb/graph.ipynb</span></a></p>
+<p><span>Write code to perform the following tasks using GraphFrames:</span></p></div>
+</div>
+
+
+  
+  <script type="text/javascript">
+    (function (require) {
+        require(['https://prod\u002Dedx\u002Dedxapp\u002Dassets.edx\u002Dcdn.org/static/js/edxnotes/views/notes_visibility_factory.8da063f73456.js?raw'], function () {
+          require(['js/edxnotes/views/notes_visibility_factory'], function (NotesVisibilityFactory) {
+            
+    var element = document.getElementById('edx-notes-wrapper-254297147010081184251379095614423311335');
+    NotesVisibilityFactory.VisibilityDecorator.factory(element, {"usageId": "block-v1:HKUSTx+MSBD5003x+2T2024+type@html+block@d97568fbb0634017bede261281d8dd66", "courseId": "course-v1:HKUSTx+MSBD5003x+2T2024", "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJiNDE4MmQ1ZjQ3ZGZiMTVhY2YxZiIsImV4cCI6MTc0MjY2MjgwMSwiZ3JhbnRfdHlwZSI6IiIsImlhdCI6MTc0MjY1OTIwMSwiaXNzIjoiaHR0cHM6Ly9jb3Vyc2VzLmVkeC5vcmcvb2F1dGgyIiwicHJlZmVycmVkX3VzZXJuYW1lIjoiY2hhcmxlc3lpdSIsInNjb3BlcyI6WyJlbWFpbCIsInByb2ZpbGUiXSwidmVyc2lvbiI6IjEuMi4wIiwic3ViIjoiMzViOTc2YWM1OWZmNjEzZWI2MGFlNjk0ZWI5NDYxN2UiLCJmaWx0ZXJzIjpbXSwiaXNfcmVzdHJpY3RlZCI6ZmFsc2UsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJlbWFpbCI6Im1hbmtveWl1QGdtYWlsLmNvbSIsIm5hbWUiOiJZaXUgV2FpIE1pbmciLCJmYW1pbHlfbmFtZSI6IllpdSIsImdpdmVuX25hbWUiOiJDaGFybGVzIiwiYWRtaW5pc3RyYXRvciI6ZmFsc2UsInN1cGVydXNlciI6ZmFsc2UsInJvbGVzIjpbImVudGVycHJpc2VfbGVhcm5lcjo5OTNiMWEyMS0wNzYwLTQ4ZjItOWYyYS04ZmMxNGY5ZWJlODkiXX0.dKAnRRSiHuPOm_ZyJCNn0uDaWg1QCIEbT5B5X_1gwyY", "tokenUrl": "/courses/course-v1:HKUSTx+MSBD5003x+2T2024/edxnotes/token/", "endpoint": "https://prod-edx-notes.edx.org/api/v1/", "debug": false, "eventStringLimit": 8333.333333333334, "user": "35b976ac59ff613eb60ae694eb94617e"}, true);
+
+          });
+        });
+    }).call(this, require || RequireJS.require);
+  </script>
+
+
+</div>
+
+    </div>
+    <div class="vert vert-1" data-id="block-v1:HKUSTx+MSBD5003x+2T2024+type@problem+block@f76b9c7326f0413a8e2dd60a6a2a7385" id="block-v1:HKUSTx+MSBD5003x+2T2024+type@problem+block@f76b9c7326f0413a8e2dd60a6a2a7385">
+        
+<div class="xblock xblock-student_view xblock-student_view-problem xmodule_display xmodule_ProblemBlock" data-course-id="course-v1:HKUSTx+MSBD5003x+2T2024" data-init="XBlockToXModuleShim" data-runtime-class="LmsRuntime" data-runtime-version="1" data-block-type="problem" data-usage-id="block-v1:HKUSTx+MSBD5003x+2T2024+type@problem+block@f76b9c7326f0413a8e2dd60a6a2a7385" data-request-token="b6489190073611f082a609d7570791c2" data-graded="True" data-has-score="True">
+  <script type="json/xblock-args" class="xblock-json-init-args">
+    {"xmodule-type": "Problem"}
+  </script>
+  <div id="problem_f76b9c7326f0413a8e2dd60a6a2a7385" class="problems-wrapper" role="group"
+     aria-labelledby="f76b9c7326f0413a8e2dd60a6a2a7385-problem-title"
+     data-problem-id="block-v1:HKUSTx+MSBD5003x+2T2024+type@problem+block@f76b9c7326f0413a8e2dd60a6a2a7385" data-url="/courses/course-v1:HKUSTx+MSBD5003x+2T2024/xblock/block-v1:HKUSTx+MSBD5003x+2T2024+type@problem+block@f76b9c7326f0413a8e2dd60a6a2a7385/handler/xmodule_handler"
+     data-problem-score="1.0"
+     data-problem-total-possible="1"
+     data-attempts-used="2"
+     data-content="
+
+
+
+&lt;h3 class=&#34;hd hd-3 problem-header&#34; id=&#34;f76b9c7326f0413a8e2dd60a6a2a7385-problem-title&#34; aria-describedby=&#34;block-v1:HKUSTx+MSBD5003x+2T2024+type@problem+block@f76b9c7326f0413a8e2dd60a6a2a7385-problem-progress&#34; tabindex=&#34;-1&#34;&gt;
+  L4-1
+&lt;/h3&gt;
+
+&lt;div class=&#34;problem-progress&#34; id=&#34;block-v1:HKUSTx+MSBD5003x+2T2024+type@problem+block@f76b9c7326f0413a8e2dd60a6a2a7385-problem-progress&#34;&gt;&lt;/div&gt;
+
+&lt;div class=&#34;problem&#34;&gt;
+  &lt;div&gt;
+  &lt;div&gt;
+    &lt;p&gt;Find Alice&#39;s two-hop neighbors&#39; names, regardless of the edge type.&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;wrapper-problem-response&#34; tabindex=&#34;-1&#34; aria-label=&#34;Question 1&#34; role=&#34;group&#34;&gt;&lt;div id=&#34;textbox_f76b9c7326f0413a8e2dd60a6a2a7385_2_1&#34; class=&#34;capa_inputtype textbox cminput&#34;&gt;
+    &lt;label class=&#34;problem-group-label&#34; for=&#34;cm-textarea-f76b9c7326f0413a8e2dd60a6a2a7385_2_1&#34;&gt;Please fill in the code in the designated place.&lt;/label&gt;
+  &lt;textarea rows=&#34;10&#34; cols=&#34;80&#34; name=&#34;input_f76b9c7326f0413a8e2dd60a6a2a7385_2_1&#34; aria-label=&#34;python editor&#34; aria-describedby=&#34;answer_f76b9c7326f0413a8e2dd60a6a2a7385_2_1&#34; id=&#34;input_f76b9c7326f0413a8e2dd60a6a2a7385_2_1&#34; tabindex=&#34;0&#34; data-mode=&#34;python&#34; data-tabsize=&#34;4&#34; data-linenums=&#34;true&#34;&gt;from pyspark.sql import SparkSession
+from pyspark import SparkContext
+
+# Our auto-grader uses spark-submit to submit your code to a
+# cluster, so we need to create sc/spark here. You don&#39;t need
+# this if you use Jupyter Notebook or shell.
+sc = SparkContext.getOrCreate()
+spark = SparkSession(sc)
+
+from graphframes import *
+from pyspark.sql.functions import *
+
+# Vertics DataFrameW
+v = spark.createDataFrame([
+  (&#34;a&#34;, &#34;Alice&#34;, 34),
+  (&#34;b&#34;, &#34;Bob&#34;, 36),
+  (&#34;c&#34;, &#34;Charlie&#34;, 37),
+  (&#34;d&#34;, &#34;David&#34;, 29),
+  (&#34;e&#34;, &#34;Esther&#34;, 32),
+  (&#34;f&#34;, &#34;Fanny&#34;, 38),
+  (&#34;g&#34;, &#34;Gabby&#34;, 60)
+], [&#34;id&#34;, &#34;name&#34;, &#34;age&#34;])
+
+# Edges DataFrame
+e = spark.createDataFrame([
+  (&#34;a&#34;, &#34;b&#34;, &#34;friend&#34;),
+  (&#34;b&#34;, &#34;c&#34;, &#34;follow&#34;),
+  (&#34;c&#34;, &#34;b&#34;, &#34;follow&#34;),
+  (&#34;f&#34;, &#34;c&#34;, &#34;follow&#34;),
+  (&#34;e&#34;, &#34;f&#34;, &#34;follow&#34;),
+  (&#34;e&#34;, &#34;d&#34;, &#34;friend&#34;),
+  (&#34;d&#34;, &#34;a&#34;, &#34;friend&#34;),
+  (&#34;a&#34;, &#34;e&#34;, &#34;friend&#34;),
+  (&#34;g&#34;, &#34;e&#34;, &#34;follow&#34;)
+], [&#34;src&#34;, &#34;dst&#34;, &#34;relationship&#34;])
+
+# Create a GraphFrame
+g = GraphFrame(v, e)
+
+# *****START OF YOUR CODE (DO NOT DELETE/MODIFY THIS LINE) *****
+# Find two-hop neighbors of Alice without specifying edge types
+two_hop = g.find(&#34;(a)-[]-&amp;gt;(b); (b)-[]-&amp;gt;(c)&#34;).filter(&#34;a.id = &#39;a&#39;&#34;)
+
+# Select distinct names of two-hop neighbors and rename the column
+friends = two_hop.select(&#34;c.name&#34;).distinct().withColumnRenamed(&#34;name&#34;, &#34;Alice&#39;s two-hop neighbors&#34;)
+
+# Sort the results in ascending order
+friends = friends.orderBy(&#34;Alice&#39;s two-hop neighbors&#34;)
+# *****END OF YOUR CODE (DO NOT DELETE/MODIFY THIS LINE) *****
+
+
+result = friends.rdd.map(lambda x: x[&#34;Alice&#39;s two-hop neighbors&#34;]).collect()
+
+print(result)
+      &lt;/textarea&gt;
+  &lt;span class=&#34;cm-editor-exit-message capa-message&#34; id=&#34;cm-editor-exit-message-f76b9c7326f0413a8e2dd60a6a2a7385_2_1&#34;&gt;
+    Press ESC then TAB or click outside of the code editor to exit
+  &lt;/span&gt;
+
+  &lt;div class=&#34;grader-status&#34; tabindex=&#34;-1&#34;&gt;
+
+    
+
+&lt;span class=&#34;status correct&#34; id=&#34;status_f76b9c7326f0413a8e2dd60a6a2a7385_2_1&#34; data-tooltip=&#34;This answer is correct.&#34;&gt;
+  &lt;span class=&#34;sr&#34;&gt;correct&lt;/span&gt;&lt;span class=&#34;status-icon&#34; aria-hidden=&#34;true&#34;/&gt;
+&lt;/span&gt;
+
+
+
+
+    &lt;p class=&#34;debug&#34;&gt;correct&lt;/p&gt;
+  &lt;/div&gt;
+
+  &lt;span id=&#34;answer_f76b9c7326f0413a8e2dd60a6a2a7385_2_1&#34;/&gt;
+
+  &lt;div class=&#34;external-grader-message&#34;&gt;
+    
+&lt;div class=&#34;test&#34;&gt;
+&lt;header&gt;Test results&lt;/header&gt;
+  &lt;section&gt;
+    &lt;div class=&#34;shortform&#34;&gt;
+    CORRECT
+    &lt;/div&gt;
+    &lt;div class=&#34;longform&#34;&gt;
+      
+      
+  &lt;div class=&#34;result-output result-correct&#34;&gt;
+    &lt;h4&gt;Compare the output of your program with the sample solution.&lt;/h4&gt;
+    &lt;pre&gt;&lt;p&gt;Compare the output of your code with our reference code with index 0 to 3(not including 3).&lt;/p&gt;&lt;/pre&gt;
+    &lt;dl&gt;
+    &lt;dt&gt;Output:&lt;/dt&gt;
+    &lt;dd class=&#34;result-actual-output&#34;&gt;
+       &lt;pre&gt;[&#39;Charlie&#39;, &#39;David&#39;, &#39;Fanny&#39;]&lt;/pre&gt;
+       &lt;/dd&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+
+    &lt;/div&gt;
+  &lt;/section&gt;
+&lt;/div&gt;
+
+  &lt;/div&gt;
+&lt;/div&gt;&lt;/div&gt;
+&lt;/div&gt;
+  &lt;div class=&#34;action&#34;&gt;
+    &lt;input type=&#34;hidden&#34; name=&#34;problem_id&#34; value=&#34;L4-1&#34; /&gt;
+
+    &lt;div class=&#34;problem-action-buttons-wrapper&#34;&gt;
+      &lt;span class=&#34;problem-action-button-wrapper&#34;&gt;
+          &lt;button type=&#34;button&#34; class=&#34;show problem-action-btn btn-link btn-small&#34; aria-describedby=&#34;f76b9c7326f0413a8e2dd60a6a2a7385-problem-title&#34;&gt;&lt;span class=&#34;show-label&#34;&gt;Show answer&lt;/span&gt;&lt;/button&gt;
+      &lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;submit-attempt-container&#34;&gt;
+      &lt;button type=&#34;button&#34; class=&#34;submit btn-brand&#34; data-submitting=&#34;Submitting&#34; data-value=&#34;Submit&#34; data-should-enable-submit-button=&#34;False&#34; aria-describedby=&#34;submission_feedback_f76b9c7326f0413a8e2dd60a6a2a7385&#34; disabled&gt;
+          &lt;span class=&#34;submit-label&#34;&gt;Submit&lt;/span&gt;
+      &lt;/button&gt;
+
+          &lt;button class=&#34;submit-cta-link-button btn-link btn-small&#34; onclick=&#34;emit_event({&amp;#39;event_name&amp;#39;: &amp;#39;post_event&amp;#39;, &amp;#39;post_data&amp;#39;: {&amp;#39;body_params&amp;#39;: {&amp;#39;course_id&amp;#39;: &amp;#39;course-v1:HKUSTx+MSBD5003x+2T2024&amp;#39;}, &amp;#39;url&amp;#39;: &amp;#39;https://courses.edx.org/api/course_experience/v1/reset_course_deadlines&amp;#39;}, &amp;#39;research_event_data&amp;#39;: {&amp;#39;block_id&amp;#39;: &amp;#39;block-v1:HKUSTx+MSBD5003x+2T2024+type@problem+block@f76b9c7326f0413a8e2dd60a6a2a7385&amp;#39;, &amp;#39;location&amp;#39;: &amp;#39;problem-view&amp;#39;}})&#34;&gt;
+            Try again (3 attempts remaining)
+          &lt;/button&gt;
+          &lt;span class=&#34;submit-cta-description&#34; tabindex=&#34;0&#34; role=&#34;note&#34; aria-label=&#34;description&#34;&gt;
+            &lt;span data-tooltip=&#34;You have used 2 of 5 attempts for this problem. &lt;b&gt;It looks like you missed some important deadlines based on our suggested schedule.&lt;/b&gt; To keep yourself on track, you can update this schedule and shift the past due assignments into the future. Don’t worry—you won’t lose any of the progress you’ve made when you shift your due dates.&#34; data-tooltip-show-on-click=&#34;true&#34;
+              class=&#34;fa fa-info-circle fa-lg&#34; aria-hidden=&#34;true&#34;&gt;
+            &lt;/span&gt;
+          &lt;/span&gt;
+          &lt;span class=&#34;sr&#34;&gt;(You have used 2 of 5 attempts for this problem. &lt;b&gt;It looks like you missed some important deadlines based on our suggested schedule.&lt;/b&gt; To keep yourself on track, you can update this schedule and shift the past due assignments into the future. Don’t worry—you won’t lose any of the progress you’ve made when you shift your due dates.)&lt;/span&gt;
+      &lt;div class=&#34;submission-feedback cta-enabled&#34; id=&#34;submission_feedback_f76b9c7326f0413a8e2dd60a6a2a7385&#34;&gt;
+        &lt;span class=&#34;sr&#34;&gt;Some problems have options such as save, reset, hints, or show answer. These options follow the Submit button.&lt;/span&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+    
+
+
+&lt;div class=&#34;notification warning notification-gentle-alert
+      is-hidden&#34;
+     tabindex=&#34;-1&#34;&gt;
+    &lt;span class=&#34;icon fa fa-exclamation-circle&#34; aria-hidden=&#34;true&#34;&gt;&lt;/span&gt;
+    &lt;span class=&#34;notification-message&#34; aria-describedby=&#34;f76b9c7326f0413a8e2dd60a6a2a7385-problem-title&#34;&gt;
+    &lt;/span&gt;
+    &lt;div class=&#34;notification-btn-wrapper&#34;&gt;
+        &lt;button type=&#34;button&#34; class=&#34;btn btn-default btn-small notification-btn review-btn sr&#34;&gt;Review&lt;/button&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+    
+
+
+&lt;div class=&#34;notification warning notification-save
+      is-hidden&#34;
+     tabindex=&#34;-1&#34;&gt;
+    &lt;span class=&#34;icon fa fa-save&#34; aria-hidden=&#34;true&#34;&gt;&lt;/span&gt;
+    &lt;span class=&#34;notification-message&#34; aria-describedby=&#34;f76b9c7326f0413a8e2dd60a6a2a7385-problem-title&#34;&gt;None
+    &lt;/span&gt;
+    &lt;div class=&#34;notification-btn-wrapper&#34;&gt;
+        &lt;button type=&#34;button&#34; class=&#34;btn btn-default btn-small notification-btn review-btn sr&#34;&gt;Review&lt;/button&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+    
+    
+
+
+&lt;div class=&#34;notification general notification-show-answer
+      is-hidden&#34;
+     tabindex=&#34;-1&#34;&gt;
+    &lt;span class=&#34;icon fa fa-info-circle&#34; aria-hidden=&#34;true&#34;&gt;&lt;/span&gt;
+    &lt;span class=&#34;notification-message&#34; aria-describedby=&#34;f76b9c7326f0413a8e2dd60a6a2a7385-problem-title&#34;&gt;Answers are displayed within the problem
+    &lt;/span&gt;
+    &lt;div class=&#34;notification-btn-wrapper&#34;&gt;
+        &lt;button type=&#34;button&#34; class=&#34;btn btn-default btn-small notification-btn review-btn sr&#34;&gt;Review&lt;/button&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+
+&lt;script&gt;
+    function emit_event(message) {
+        parent.postMessage(message, &#39;*&#39;);
+    }
+&lt;/script&gt;
+"
+     data-graded="True">
+    <p class="loading-spinner">
+        <i class="fa fa-spinner fa-pulse fa-2x fa-fw"></i>
+        <span class="sr">Loading&hellip;</span>
+    </p>
+</div>
+
+</div>
+
+    </div>
+    <div class="vert vert-2" data-id="block-v1:HKUSTx+MSBD5003x+2T2024+type@problem+block@5bac9688607a448cb23944c79b8ba090" id="block-v1:HKUSTx+MSBD5003x+2T2024+type@problem+block@5bac9688607a448cb23944c79b8ba090">
+        
+<div class="xblock xblock-student_view xblock-student_view-problem xmodule_display xmodule_ProblemBlock" data-course-id="course-v1:HKUSTx+MSBD5003x+2T2024" data-init="XBlockToXModuleShim" data-runtime-class="LmsRuntime" data-runtime-version="1" data-block-type="problem" data-usage-id="block-v1:HKUSTx+MSBD5003x+2T2024+type@problem+block@5bac9688607a448cb23944c79b8ba090" data-request-token="b6489190073611f082a609d7570791c2" data-graded="True" data-has-score="True">
+  <script type="json/xblock-args" class="xblock-json-init-args">
+    {"xmodule-type": "Problem"}
+  </script>
+  <div id="problem_5bac9688607a448cb23944c79b8ba090" class="problems-wrapper" role="group"
+     aria-labelledby="5bac9688607a448cb23944c79b8ba090-problem-title"
+     data-problem-id="block-v1:HKUSTx+MSBD5003x+2T2024+type@problem+block@5bac9688607a448cb23944c79b8ba090" data-url="/courses/course-v1:HKUSTx+MSBD5003x+2T2024/xblock/block-v1:HKUSTx+MSBD5003x+2T2024+type@problem+block@5bac9688607a448cb23944c79b8ba090/handler/xmodule_handler"
+     data-problem-score="1.0"
+     data-problem-total-possible="1"
+     data-attempts-used="2"
+     data-content="
+
+
+
+&lt;h3 class=&#34;hd hd-3 problem-header&#34; id=&#34;5bac9688607a448cb23944c79b8ba090-problem-title&#34; aria-describedby=&#34;block-v1:HKUSTx+MSBD5003x+2T2024+type@problem+block@5bac9688607a448cb23944c79b8ba090-problem-progress&#34; tabindex=&#34;-1&#34;&gt;
+  L4-2
+&lt;/h3&gt;
+
+&lt;div class=&#34;problem-progress&#34; id=&#34;block-v1:HKUSTx+MSBD5003x+2T2024+type@problem+block@5bac9688607a448cb23944c79b8ba090-problem-progress&#34;&gt;&lt;/div&gt;
+
+&lt;div class=&#34;problem&#34;&gt;
+  &lt;div&gt;
+  &lt;div&gt;
+    &lt;p&gt;Find all people who follow Charlie.&lt;/p&gt;
+    &lt;p&gt;Hint: Use AND in SQL, or (..) &amp;amp; (..) in DataFrame boolean expressions.&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;wrapper-problem-response&#34; tabindex=&#34;-1&#34; aria-label=&#34;Question 1&#34; role=&#34;group&#34;&gt;&lt;div id=&#34;textbox_5bac9688607a448cb23944c79b8ba090_2_1&#34; class=&#34;capa_inputtype textbox cminput&#34;&gt;
+    &lt;label class=&#34;problem-group-label&#34; for=&#34;cm-textarea-5bac9688607a448cb23944c79b8ba090_2_1&#34;&gt;Please fill in the code in the designated place, please do not change the initial code.&lt;/label&gt;
+  &lt;textarea rows=&#34;10&#34; cols=&#34;80&#34; name=&#34;input_5bac9688607a448cb23944c79b8ba090_2_1&#34; aria-label=&#34;python editor&#34; aria-describedby=&#34;answer_5bac9688607a448cb23944c79b8ba090_2_1&#34; id=&#34;input_5bac9688607a448cb23944c79b8ba090_2_1&#34; tabindex=&#34;0&#34; data-mode=&#34;python&#34; data-tabsize=&#34;4&#34; data-linenums=&#34;true&#34;&gt;from pyspark.sql import SparkSession
+from pyspark import SparkContext
+
+# Our auto-grader uses spark-submit to submit your code to a
+# cluster, so we need to create sc/spark here. You don&#39;t need
+# this if you use Jupyter Notebook or shell.
+sc = SparkContext.getOrCreate()
+spark = SparkSession(sc)
+
+from graphframes import *
+from pyspark.sql.functions import *
+
+# Vertics DataFrameW
+v = spark.createDataFrame([
+  (&#34;a&#34;, &#34;Alice&#34;, 34),
+  (&#34;b&#34;, &#34;Bob&#34;, 36),
+  (&#34;c&#34;, &#34;Charlie&#34;, 37),
+  (&#34;d&#34;, &#34;David&#34;, 29),
+  (&#34;e&#34;, &#34;Esther&#34;, 32),
+  (&#34;f&#34;, &#34;Fanny&#34;, 38),
+  (&#34;g&#34;, &#34;Gabby&#34;, 60)
+], [&#34;id&#34;, &#34;name&#34;, &#34;age&#34;])
+
+# Edges DataFrame
+e = spark.createDataFrame([
+  (&#34;a&#34;, &#34;b&#34;, &#34;friend&#34;),
+  (&#34;b&#34;, &#34;c&#34;, &#34;follow&#34;),
+  (&#34;c&#34;, &#34;b&#34;, &#34;follow&#34;),
+  (&#34;f&#34;, &#34;c&#34;, &#34;follow&#34;),
+  (&#34;e&#34;, &#34;f&#34;, &#34;follow&#34;),
+  (&#34;e&#34;, &#34;d&#34;, &#34;friend&#34;),
+  (&#34;d&#34;, &#34;a&#34;, &#34;friend&#34;),
+  (&#34;a&#34;, &#34;e&#34;, &#34;friend&#34;),
+  (&#34;g&#34;, &#34;e&#34;, &#34;follow&#34;)
+], [&#34;src&#34;, &#34;dst&#34;, &#34;relationship&#34;])
+
+# Create a GraphFrame
+g = GraphFrame(v, e)
+
+# *****START OF YOUR CODE (DO NOT DELETE/MODIFY THIS LINE)*****
+
+# Your answer should be a dataframe, which contains column
+# &#34;Charlie&#39;s follower&#34;. Please rename the target column 
+# as &#34;Charlie&#39;s follower&#34;, and sort this column in
+# ascending order.
+
+followers = g.find(&#34;(a)-[follow]-&amp;gt;(b)&#34;).filter(&#34;b.id = &#39;c&#39;&#34;)
+
+# Select the source names and rename the column
+followers = followers.select(&#34;a.name&#34;).distinct().withColumnRenamed(&#34;name&#34;, &#34;Charlie&#39;s follower&#34;)
+
+# Sort the results in ascending order
+followers = followers.orderBy(&#34;Charlie&#39;s follower&#34;)
+# *****END OF YOUR CODE (DO NOT DELETE/MODIFY THIS LINE)*****
+
+
+result = followers.rdd.map(lambda x: x[&#34;Charlie&#39;s follower&#34;]).collect()
+
+print(result)
+      &lt;/textarea&gt;
+  &lt;span class=&#34;cm-editor-exit-message capa-message&#34; id=&#34;cm-editor-exit-message-5bac9688607a448cb23944c79b8ba090_2_1&#34;&gt;
+    Press ESC then TAB or click outside of the code editor to exit
+  &lt;/span&gt;
+
+  &lt;div class=&#34;grader-status&#34; tabindex=&#34;-1&#34;&gt;
+
+    
+
+&lt;span class=&#34;status correct&#34; id=&#34;status_5bac9688607a448cb23944c79b8ba090_2_1&#34; data-tooltip=&#34;This answer is correct.&#34;&gt;
+  &lt;span class=&#34;sr&#34;&gt;correct&lt;/span&gt;&lt;span class=&#34;status-icon&#34; aria-hidden=&#34;true&#34;/&gt;
+&lt;/span&gt;
+
+
+
+
+    &lt;p class=&#34;debug&#34;&gt;correct&lt;/p&gt;
+  &lt;/div&gt;
+
+  &lt;span id=&#34;answer_5bac9688607a448cb23944c79b8ba090_2_1&#34;/&gt;
+
+  &lt;div class=&#34;external-grader-message&#34;&gt;
+    
+&lt;div class=&#34;test&#34;&gt;
+&lt;header&gt;Test results&lt;/header&gt;
+  &lt;section&gt;
+    &lt;div class=&#34;shortform&#34;&gt;
+    CORRECT
+    &lt;/div&gt;
+    &lt;div class=&#34;longform&#34;&gt;
+      
+      
+  &lt;div class=&#34;result-output result-correct&#34;&gt;
+    &lt;h4&gt;Compare the output of your program with the sample solution.&lt;/h4&gt;
+    &lt;pre&gt;&lt;p&gt;Compare the output of your code with our reference code with index 0 to 2(not including 2).&lt;/p&gt;&lt;/pre&gt;
+    &lt;dl&gt;
+    &lt;dt&gt;Output:&lt;/dt&gt;
+    &lt;dd class=&#34;result-actual-output&#34;&gt;
+       &lt;pre&gt;[&#39;Bob&#39;, &#39;Fanny&#39;]&lt;/pre&gt;
+       &lt;/dd&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+
+    &lt;/div&gt;
+  &lt;/section&gt;
+&lt;/div&gt;
+
+  &lt;/div&gt;
+&lt;/div&gt;&lt;/div&gt;
+&lt;/div&gt;
+  &lt;div class=&#34;action&#34;&gt;
+    &lt;input type=&#34;hidden&#34; name=&#34;problem_id&#34; value=&#34;L4-2&#34; /&gt;
+
+    &lt;div class=&#34;problem-action-buttons-wrapper&#34;&gt;
+      &lt;span class=&#34;problem-action-button-wrapper&#34;&gt;
+          &lt;button type=&#34;button&#34; class=&#34;show problem-action-btn btn-link btn-small&#34; aria-describedby=&#34;5bac9688607a448cb23944c79b8ba090-problem-title&#34;&gt;&lt;span class=&#34;show-label&#34;&gt;Show answer&lt;/span&gt;&lt;/button&gt;
+      &lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;submit-attempt-container&#34;&gt;
+      &lt;button type=&#34;button&#34; class=&#34;submit btn-brand&#34; data-submitting=&#34;Submitting&#34; data-value=&#34;Submit&#34; data-should-enable-submit-button=&#34;False&#34; aria-describedby=&#34;submission_feedback_5bac9688607a448cb23944c79b8ba090&#34; disabled&gt;
+          &lt;span class=&#34;submit-label&#34;&gt;Submit&lt;/span&gt;
+      &lt;/button&gt;
+
+          &lt;button class=&#34;submit-cta-link-button btn-link btn-small&#34; onclick=&#34;emit_event({&amp;#39;event_name&amp;#39;: &amp;#39;post_event&amp;#39;, &amp;#39;post_data&amp;#39;: {&amp;#39;body_params&amp;#39;: {&amp;#39;course_id&amp;#39;: &amp;#39;course-v1:HKUSTx+MSBD5003x+2T2024&amp;#39;}, &amp;#39;url&amp;#39;: &amp;#39;https://courses.edx.org/api/course_experience/v1/reset_course_deadlines&amp;#39;}, &amp;#39;research_event_data&amp;#39;: {&amp;#39;block_id&amp;#39;: &amp;#39;block-v1:HKUSTx+MSBD5003x+2T2024+type@problem+block@5bac9688607a448cb23944c79b8ba090&amp;#39;, &amp;#39;location&amp;#39;: &amp;#39;problem-view&amp;#39;}})&#34;&gt;
+            Try again (3 attempts remaining)
+          &lt;/button&gt;
+          &lt;span class=&#34;submit-cta-description&#34; tabindex=&#34;0&#34; role=&#34;note&#34; aria-label=&#34;description&#34;&gt;
+            &lt;span data-tooltip=&#34;You have used 2 of 5 attempts for this problem. &lt;b&gt;It looks like you missed some important deadlines based on our suggested schedule.&lt;/b&gt; To keep yourself on track, you can update this schedule and shift the past due assignments into the future. Don’t worry—you won’t lose any of the progress you’ve made when you shift your due dates.&#34; data-tooltip-show-on-click=&#34;true&#34;
+              class=&#34;fa fa-info-circle fa-lg&#34; aria-hidden=&#34;true&#34;&gt;
+            &lt;/span&gt;
+          &lt;/span&gt;
+          &lt;span class=&#34;sr&#34;&gt;(You have used 2 of 5 attempts for this problem. &lt;b&gt;It looks like you missed some important deadlines based on our suggested schedule.&lt;/b&gt; To keep yourself on track, you can update this schedule and shift the past due assignments into the future. Don’t worry—you won’t lose any of the progress you’ve made when you shift your due dates.)&lt;/span&gt;
+      &lt;div class=&#34;submission-feedback cta-enabled&#34; id=&#34;submission_feedback_5bac9688607a448cb23944c79b8ba090&#34;&gt;
+        &lt;span class=&#34;sr&#34;&gt;Some problems have options such as save, reset, hints, or show answer. These options follow the Submit button.&lt;/span&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+    
+
+
+&lt;div class=&#34;notification warning notification-gentle-alert
+      is-hidden&#34;
+     tabindex=&#34;-1&#34;&gt;
+    &lt;span class=&#34;icon fa fa-exclamation-circle&#34; aria-hidden=&#34;true&#34;&gt;&lt;/span&gt;
+    &lt;span class=&#34;notification-message&#34; aria-describedby=&#34;5bac9688607a448cb23944c79b8ba090-problem-title&#34;&gt;
+    &lt;/span&gt;
+    &lt;div class=&#34;notification-btn-wrapper&#34;&gt;
+        &lt;button type=&#34;button&#34; class=&#34;btn btn-default btn-small notification-btn review-btn sr&#34;&gt;Review&lt;/button&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+    
+
+
+&lt;div class=&#34;notification warning notification-save
+      is-hidden&#34;
+     tabindex=&#34;-1&#34;&gt;
+    &lt;span class=&#34;icon fa fa-save&#34; aria-hidden=&#34;true&#34;&gt;&lt;/span&gt;
+    &lt;span class=&#34;notification-message&#34; aria-describedby=&#34;5bac9688607a448cb23944c79b8ba090-problem-title&#34;&gt;None
+    &lt;/span&gt;
+    &lt;div class=&#34;notification-btn-wrapper&#34;&gt;
+        &lt;button type=&#34;button&#34; class=&#34;btn btn-default btn-small notification-btn review-btn sr&#34;&gt;Review&lt;/button&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+    
+    
+
+
+&lt;div class=&#34;notification general notification-show-answer
+      is-hidden&#34;
+     tabindex=&#34;-1&#34;&gt;
+    &lt;span class=&#34;icon fa fa-info-circle&#34; aria-hidden=&#34;true&#34;&gt;&lt;/span&gt;
+    &lt;span class=&#34;notification-message&#34; aria-describedby=&#34;5bac9688607a448cb23944c79b8ba090-problem-title&#34;&gt;Answers are displayed within the problem
+    &lt;/span&gt;
+    &lt;div class=&#34;notification-btn-wrapper&#34;&gt;
+        &lt;button type=&#34;button&#34; class=&#34;btn btn-default btn-small notification-btn review-btn sr&#34;&gt;Review&lt;/button&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+
+&lt;script&gt;
+    function emit_event(message) {
+        parent.postMessage(message, &#39;*&#39;);
+    }
+&lt;/script&gt;
+"
+     data-graded="True">
+    <p class="loading-spinner">
+        <i class="fa fa-spinner fa-pulse fa-2x fa-fw"></i>
+        <span class="sr">Loading&hellip;</span>
+    </p>
+</div>
+
+</div>
+
+    </div>
+    <div class="vert vert-3" data-id="block-v1:HKUSTx+MSBD5003x+2T2024+type@problem+block@3b4b8639b4984a53af723c5c2a9cc031" id="block-v1:HKUSTx+MSBD5003x+2T2024+type@problem+block@3b4b8639b4984a53af723c5c2a9cc031">
+        
+<div class="xblock xblock-student_view xblock-student_view-problem xmodule_display xmodule_ProblemBlock" data-course-id="course-v1:HKUSTx+MSBD5003x+2T2024" data-init="XBlockToXModuleShim" data-runtime-class="LmsRuntime" data-runtime-version="1" data-block-type="problem" data-usage-id="block-v1:HKUSTx+MSBD5003x+2T2024+type@problem+block@3b4b8639b4984a53af723c5c2a9cc031" data-request-token="b6489190073611f082a609d7570791c2" data-graded="True" data-has-score="True">
+  <script type="json/xblock-args" class="xblock-json-init-args">
+    {"xmodule-type": "Problem"}
+  </script>
+  <div id="problem_3b4b8639b4984a53af723c5c2a9cc031" class="problems-wrapper" role="group"
+     aria-labelledby="3b4b8639b4984a53af723c5c2a9cc031-problem-title"
+     data-problem-id="block-v1:HKUSTx+MSBD5003x+2T2024+type@problem+block@3b4b8639b4984a53af723c5c2a9cc031" data-url="/courses/course-v1:HKUSTx+MSBD5003x+2T2024/xblock/block-v1:HKUSTx+MSBD5003x+2T2024+type@problem+block@3b4b8639b4984a53af723c5c2a9cc031/handler/xmodule_handler"
+     data-problem-score="1.0"
+     data-problem-total-possible="1"
+     data-attempts-used="3"
+     data-content="
+
+
+
+&lt;h3 class=&#34;hd hd-3 problem-header&#34; id=&#34;3b4b8639b4984a53af723c5c2a9cc031-problem-title&#34; aria-describedby=&#34;block-v1:HKUSTx+MSBD5003x+2T2024+type@problem+block@3b4b8639b4984a53af723c5c2a9cc031-problem-progress&#34; tabindex=&#34;-1&#34;&gt;
+  L4-3
+&lt;/h3&gt;
+
+&lt;div class=&#34;problem-progress&#34; id=&#34;block-v1:HKUSTx+MSBD5003x+2T2024+type@problem+block@3b4b8639b4984a53af723c5c2a9cc031-problem-progress&#34;&gt;&lt;/div&gt;
+
+&lt;div class=&#34;problem&#34;&gt;
+  &lt;div&gt;
+  &lt;div&gt;
+    &lt;p&gt;Find all people who are being followed by at least 2 people.&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;wrapper-problem-response&#34; tabindex=&#34;-1&#34; aria-label=&#34;Question 1&#34; role=&#34;group&#34;&gt;&lt;div id=&#34;textbox_3b4b8639b4984a53af723c5c2a9cc031_2_1&#34; class=&#34;capa_inputtype textbox cminput&#34;&gt;
+    &lt;label class=&#34;problem-group-label&#34; for=&#34;cm-textarea-3b4b8639b4984a53af723c5c2a9cc031_2_1&#34;&gt;Please fill in the code in the designated place, please do not change the initial code.&lt;/label&gt;
+  &lt;textarea rows=&#34;10&#34; cols=&#34;80&#34; name=&#34;input_3b4b8639b4984a53af723c5c2a9cc031_2_1&#34; aria-label=&#34;python editor&#34; aria-describedby=&#34;answer_3b4b8639b4984a53af723c5c2a9cc031_2_1&#34; id=&#34;input_3b4b8639b4984a53af723c5c2a9cc031_2_1&#34; tabindex=&#34;0&#34; data-mode=&#34;python&#34; data-tabsize=&#34;4&#34; data-linenums=&#34;true&#34;&gt;from pyspark.sql import SparkSession
+from pyspark import SparkContext
+
+# Our auto-grader uses spark-submit to submit your code to a
+# cluster, so we need to create sc/spark here. You don&#39;t need
+# this if you use Jupyter Notebook or shell.
+sc = SparkContext.getOrCreate()
+spark = SparkSession(sc)
+
+from graphframes import *
+from pyspark.sql.functions import *
+
+# Vertics DataFrameW
+v = spark.createDataFrame([
+  (&#34;a&#34;, &#34;Alice&#34;, 34),
+  (&#34;b&#34;, &#34;Bob&#34;, 36),
+  (&#34;c&#34;, &#34;Charlie&#34;, 37),
+  (&#34;d&#34;, &#34;David&#34;, 29),
+  (&#34;e&#34;, &#34;Esther&#34;, 32),
+  (&#34;f&#34;, &#34;Fanny&#34;, 38),
+  (&#34;g&#34;, &#34;Gabby&#34;, 60)
+], [&#34;id&#34;, &#34;name&#34;, &#34;age&#34;])
+
+# Edges DataFrame
+e = spark.createDataFrame([
+  (&#34;a&#34;, &#34;b&#34;, &#34;friend&#34;),
+  (&#34;b&#34;, &#34;c&#34;, &#34;follow&#34;),
+  (&#34;c&#34;, &#34;b&#34;, &#34;follow&#34;),
+  (&#34;f&#34;, &#34;c&#34;, &#34;follow&#34;),
+  (&#34;e&#34;, &#34;f&#34;, &#34;follow&#34;),
+  (&#34;e&#34;, &#34;d&#34;, &#34;friend&#34;),
+  (&#34;d&#34;, &#34;a&#34;, &#34;friend&#34;),
+  (&#34;a&#34;, &#34;e&#34;, &#34;friend&#34;),
+  (&#34;g&#34;, &#34;e&#34;, &#34;follow&#34;)
+], [&#34;src&#34;, &#34;dst&#34;, &#34;relationship&#34;])
+
+# Create a GraphFrame
+g = GraphFrame(v, e)
+
+# *****START OF YOUR CODE (DO NOT DELETE/MODIFY THIS LINE) *****
+# Count the number of unique followers for each person
+follower_counts = g.edges.filter(&#34;relationship = &#39;follow&#39;&#34;) \
+    .groupBy(&#34;dst&#34;) \
+    .agg(countDistinct(&#34;src&#34;).alias(&#34;follower_count&#34;))
+
+# Filter to get only those who have at least 2 unique followers
+targets = follower_counts.filter(&#34;follower_count &amp;gt;= 2&#34;).select(&#34;dst&#34;).withColumnRenamed(&#34;dst&#34;, &#34;targets&#34;)
+
+# Join with the vertices DataFrame to get names
+targets = targets.join(v, v.id == targets.targets).select(&#34;name&#34;).withColumnRenamed(&#34;name&#34;, &#34;targets&#34;)
+
+# Sort the results in ascending order
+targets = targets.orderBy(&#34;targets&#34;)
+# *****END OF YOUR CODE (DO NOT DELETE/MODIFY THIS LINE) *****
+
+result = targets.rdd.map(lambda x: x[&#34;targets&#34;]).collect()
+
+print(result)
+      &lt;/textarea&gt;
+  &lt;span class=&#34;cm-editor-exit-message capa-message&#34; id=&#34;cm-editor-exit-message-3b4b8639b4984a53af723c5c2a9cc031_2_1&#34;&gt;
+    Press ESC then TAB or click outside of the code editor to exit
+  &lt;/span&gt;
+
+  &lt;div class=&#34;grader-status&#34; tabindex=&#34;-1&#34;&gt;
+
+    
+
+&lt;span class=&#34;status correct&#34; id=&#34;status_3b4b8639b4984a53af723c5c2a9cc031_2_1&#34; data-tooltip=&#34;This answer is correct.&#34;&gt;
+  &lt;span class=&#34;sr&#34;&gt;correct&lt;/span&gt;&lt;span class=&#34;status-icon&#34; aria-hidden=&#34;true&#34;/&gt;
+&lt;/span&gt;
+
+
+
+
+    &lt;p class=&#34;debug&#34;&gt;correct&lt;/p&gt;
+  &lt;/div&gt;
+
+  &lt;span id=&#34;answer_3b4b8639b4984a53af723c5c2a9cc031_2_1&#34;/&gt;
+
+  &lt;div class=&#34;external-grader-message&#34;&gt;
+    
+&lt;div class=&#34;test&#34;&gt;
+&lt;header&gt;Test results&lt;/header&gt;
+  &lt;section&gt;
+    &lt;div class=&#34;shortform&#34;&gt;
+    CORRECT
+    &lt;/div&gt;
+    &lt;div class=&#34;longform&#34;&gt;
+      
+      
+  &lt;div class=&#34;result-output result-correct&#34;&gt;
+    &lt;h4&gt;Compare the output of your program with the sample solution.&lt;/h4&gt;
+    &lt;pre&gt;&lt;p&gt;Compare the output of your code with our reference code with index 0 to 1(not including 1).&lt;/p&gt;&lt;/pre&gt;
+    &lt;dl&gt;
+    &lt;dt&gt;Output:&lt;/dt&gt;
+    &lt;dd class=&#34;result-actual-output&#34;&gt;
+       &lt;pre&gt;[&#39;Charlie&#39;]&lt;/pre&gt;
+       &lt;/dd&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+
+    &lt;/div&gt;
+  &lt;/section&gt;
+&lt;/div&gt;
+
+  &lt;/div&gt;
+&lt;/div&gt;&lt;/div&gt;
+&lt;/div&gt;
+  &lt;div class=&#34;action&#34;&gt;
+    &lt;input type=&#34;hidden&#34; name=&#34;problem_id&#34; value=&#34;L4-3&#34; /&gt;
+
+    &lt;div class=&#34;problem-action-buttons-wrapper&#34;&gt;
+      &lt;span class=&#34;problem-action-button-wrapper&#34;&gt;
+          &lt;button type=&#34;button&#34; class=&#34;show problem-action-btn btn-link btn-small&#34; aria-describedby=&#34;3b4b8639b4984a53af723c5c2a9cc031-problem-title&#34;&gt;&lt;span class=&#34;show-label&#34;&gt;Show answer&lt;/span&gt;&lt;/button&gt;
+      &lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;submit-attempt-container&#34;&gt;
+      &lt;button type=&#34;button&#34; class=&#34;submit btn-brand&#34; data-submitting=&#34;Submitting&#34; data-value=&#34;Submit&#34; data-should-enable-submit-button=&#34;False&#34; aria-describedby=&#34;submission_feedback_3b4b8639b4984a53af723c5c2a9cc031&#34; disabled&gt;
+          &lt;span class=&#34;submit-label&#34;&gt;Submit&lt;/span&gt;
+      &lt;/button&gt;
+
+          &lt;button class=&#34;submit-cta-link-button btn-link btn-small&#34; onclick=&#34;emit_event({&amp;#39;event_name&amp;#39;: &amp;#39;post_event&amp;#39;, &amp;#39;post_data&amp;#39;: {&amp;#39;body_params&amp;#39;: {&amp;#39;course_id&amp;#39;: &amp;#39;course-v1:HKUSTx+MSBD5003x+2T2024&amp;#39;}, &amp;#39;url&amp;#39;: &amp;#39;https://courses.edx.org/api/course_experience/v1/reset_course_deadlines&amp;#39;}, &amp;#39;research_event_data&amp;#39;: {&amp;#39;block_id&amp;#39;: &amp;#39;block-v1:HKUSTx+MSBD5003x+2T2024+type@problem+block@3b4b8639b4984a53af723c5c2a9cc031&amp;#39;, &amp;#39;location&amp;#39;: &amp;#39;problem-view&amp;#39;}})&#34;&gt;
+            Try again (unlimited attempts)
+          &lt;/button&gt;
+          &lt;span class=&#34;submit-cta-description&#34; tabindex=&#34;0&#34; role=&#34;note&#34; aria-label=&#34;description&#34;&gt;
+            &lt;span data-tooltip=&#34;You have used 3 of unlimited attempts for this problem. &lt;b&gt;It looks like you missed some important deadlines based on our suggested schedule.&lt;/b&gt; To keep yourself on track, you can update this schedule and shift the past due assignments into the future. Don’t worry—you won’t lose any of the progress you’ve made when you shift your due dates.&#34; data-tooltip-show-on-click=&#34;true&#34;
+              class=&#34;fa fa-info-circle fa-lg&#34; aria-hidden=&#34;true&#34;&gt;
+            &lt;/span&gt;
+          &lt;/span&gt;
+          &lt;span class=&#34;sr&#34;&gt;(You have used 3 of unlimited attempts for this problem. &lt;b&gt;It looks like you missed some important deadlines based on our suggested schedule.&lt;/b&gt; To keep yourself on track, you can update this schedule and shift the past due assignments into the future. Don’t worry—you won’t lose any of the progress you’ve made when you shift your due dates.)&lt;/span&gt;
+      &lt;div class=&#34;submission-feedback cta-enabled&#34; id=&#34;submission_feedback_3b4b8639b4984a53af723c5c2a9cc031&#34;&gt;
+        &lt;span class=&#34;sr&#34;&gt;Some problems have options such as save, reset, hints, or show answer. These options follow the Submit button.&lt;/span&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+    
+
+
+&lt;div class=&#34;notification warning notification-gentle-alert
+      is-hidden&#34;
+     tabindex=&#34;-1&#34;&gt;
+    &lt;span class=&#34;icon fa fa-exclamation-circle&#34; aria-hidden=&#34;true&#34;&gt;&lt;/span&gt;
+    &lt;span class=&#34;notification-message&#34; aria-describedby=&#34;3b4b8639b4984a53af723c5c2a9cc031-problem-title&#34;&gt;
+    &lt;/span&gt;
+    &lt;div class=&#34;notification-btn-wrapper&#34;&gt;
+        &lt;button type=&#34;button&#34; class=&#34;btn btn-default btn-small notification-btn review-btn sr&#34;&gt;Review&lt;/button&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+    
+
+
+&lt;div class=&#34;notification warning notification-save
+      is-hidden&#34;
+     tabindex=&#34;-1&#34;&gt;
+    &lt;span class=&#34;icon fa fa-save&#34; aria-hidden=&#34;true&#34;&gt;&lt;/span&gt;
+    &lt;span class=&#34;notification-message&#34; aria-describedby=&#34;3b4b8639b4984a53af723c5c2a9cc031-problem-title&#34;&gt;None
+    &lt;/span&gt;
+    &lt;div class=&#34;notification-btn-wrapper&#34;&gt;
+        &lt;button type=&#34;button&#34; class=&#34;btn btn-default btn-small notification-btn review-btn sr&#34;&gt;Review&lt;/button&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+    
+    
+
+
+&lt;div class=&#34;notification general notification-show-answer
+      is-hidden&#34;
+     tabindex=&#34;-1&#34;&gt;
+    &lt;span class=&#34;icon fa fa-info-circle&#34; aria-hidden=&#34;true&#34;&gt;&lt;/span&gt;
+    &lt;span class=&#34;notification-message&#34; aria-describedby=&#34;3b4b8639b4984a53af723c5c2a9cc031-problem-title&#34;&gt;Answers are displayed within the problem
+    &lt;/span&gt;
+    &lt;div class=&#34;notification-btn-wrapper&#34;&gt;
+        &lt;button type=&#34;button&#34; class=&#34;btn btn-default btn-small notification-btn review-btn sr&#34;&gt;Review&lt;/button&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+
+&lt;script&gt;
+    function emit_event(message) {
+        parent.postMessage(message, &#39;*&#39;);
+    }
+&lt;/script&gt;
+"
+     data-graded="True">
+    <p class="loading-spinner">
+        <i class="fa fa-spinner fa-pulse fa-2x fa-fw"></i>
+        <span class="sr">Loading&hellip;</span>
+    </p>
+</div>
+
+</div>
+
+    </div>
+    <div class="vert vert-4" data-id="block-v1:HKUSTx+MSBD5003x+2T2024+type@problem+block@c08be5ae76c343db9846fa61c85059ec" id="block-v1:HKUSTx+MSBD5003x+2T2024+type@problem+block@c08be5ae76c343db9846fa61c85059ec">
+        
+<div class="xblock xblock-student_view xblock-student_view-problem xmodule_display xmodule_ProblemBlock" data-course-id="course-v1:HKUSTx+MSBD5003x+2T2024" data-init="XBlockToXModuleShim" data-runtime-class="LmsRuntime" data-runtime-version="1" data-block-type="problem" data-usage-id="block-v1:HKUSTx+MSBD5003x+2T2024+type@problem+block@c08be5ae76c343db9846fa61c85059ec" data-request-token="b6489190073611f082a609d7570791c2" data-graded="True" data-has-score="True">
+  <script type="json/xblock-args" class="xblock-json-init-args">
+    {"xmodule-type": "Problem"}
+  </script>
+  <div id="problem_c08be5ae76c343db9846fa61c85059ec" class="problems-wrapper" role="group"
+     aria-labelledby="c08be5ae76c343db9846fa61c85059ec-problem-title"
+     data-problem-id="block-v1:HKUSTx+MSBD5003x+2T2024+type@problem+block@c08be5ae76c343db9846fa61c85059ec" data-url="/courses/course-v1:HKUSTx+MSBD5003x+2T2024/xblock/block-v1:HKUSTx+MSBD5003x+2T2024+type@problem+block@c08be5ae76c343db9846fa61c85059ec/handler/xmodule_handler"
+     data-problem-score="2.0"
+     data-problem-total-possible="2.0"
+     data-attempts-used="2"
+     data-content="
+
+
+
+&lt;h3 class=&#34;hd hd-3 problem-header&#34; id=&#34;c08be5ae76c343db9846fa61c85059ec-problem-title&#34; aria-describedby=&#34;block-v1:HKUSTx+MSBD5003x+2T2024+type@problem+block@c08be5ae76c343db9846fa61c85059ec-problem-progress&#34; tabindex=&#34;-1&#34;&gt;
+  L4-4
+&lt;/h3&gt;
+
+&lt;div class=&#34;problem-progress&#34; id=&#34;block-v1:HKUSTx+MSBD5003x+2T2024+type@problem+block@c08be5ae76c343db9846fa61c85059ec-problem-progress&#34;&gt;&lt;/div&gt;
+
+&lt;div class=&#34;problem&#34;&gt;
+  &lt;div&gt;
+  &lt;div&gt;
+    &lt;p&gt;In social networks, the service provider will recommend people for you to follow. It may recommend a person P if you are following one of P&#39;s friends. But P should not be recommended if you are already following P or you and P are already friends. Note that &#34;friend&#34; relationships are two-way while &#34;follow&#34; relationships are one-way.&lt;/p&gt;
+    &lt;p&gt;Given the following graph representing a social network, find the recommendations for all users. Your program should output all pairs of users (A, B), where B is recommended to A. In the output, report the users using their names. Duplicates SHOULD be removed.&lt;/p&gt;
+    &lt;p&gt;Example: Esther is following Alice, who has a friend Charlie. Since Esther is not already following Charlie and they are not friends, Charlie is recommended to Esther. Your output should contain a pair (Esther, Charlie).&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;wrapper-problem-response&#34; tabindex=&#34;-1&#34; aria-label=&#34;Question 1&#34; role=&#34;group&#34;&gt;&lt;div id=&#34;textbox_c08be5ae76c343db9846fa61c85059ec_2_1&#34; class=&#34;capa_inputtype textbox cminput&#34;&gt;
+    &lt;label class=&#34;sr problem-group-label&#34; for=&#34;cm-textarea-c08be5ae76c343db9846fa61c85059ec_2_1&#34;&gt;Code Editor&lt;/label&gt;
+  &lt;textarea rows=&#34;10&#34; cols=&#34;80&#34; name=&#34;input_c08be5ae76c343db9846fa61c85059ec_2_1&#34; aria-label=&#34;python editor&#34; aria-describedby=&#34;answer_c08be5ae76c343db9846fa61c85059ec_2_1&#34; id=&#34;input_c08be5ae76c343db9846fa61c85059ec_2_1&#34; tabindex=&#34;0&#34; data-mode=&#34;python&#34; data-tabsize=&#34;4&#34; data-linenums=&#34;true&#34;&gt;from pyspark.sql import SparkSession
+from pyspark import SparkContext
+
+# Our auto-grader uses spark-submit to submit your code to a
+# cluster, so we need to create sc/spark here. You don&#39;t need
+# this if you use Jupyter Notebook or shell.
+sc = SparkContext.getOrCreate()
+spark = SparkSession(sc)
+
+from graphframes import *
+from pyspark.sql.functions import *
+
+# Vertics DataFrameW
+v = spark.createDataFrame([
+ (&#34;a&#34;, &#34;Alice&#34;, 34),
+ (&#34;b&#34;, &#34;Bob&#34;, 36),
+ (&#34;c&#34;, &#34;Charlie&#34;, 37),
+ (&#34;d&#34;, &#34;David&#34;, 29),
+ (&#34;e&#34;, &#34;Esther&#34;, 32),
+ (&#34;f&#34;, &#34;Fanny&#34;, 38),
+ (&#34;g&#34;, &#34;Gabby&#34;, 60)
+], [&#34;id&#34;, &#34;name&#34;, &#34;age&#34;])
+
+# Edges DataFrame
+e = spark.createDataFrame([
+ (&#34;a&#34;, &#34;b&#34;, &#34;follow&#34;),
+ (&#34;a&#34;, &#34;c&#34;, &#34;friend&#34;),
+ (&#34;a&#34;, &#34;g&#34;, &#34;friend&#34;),
+ (&#34;b&#34;, &#34;c&#34;, &#34;friend&#34;),
+ (&#34;c&#34;, &#34;a&#34;, &#34;friend&#34;),
+ (&#34;c&#34;, &#34;b&#34;, &#34;friend&#34;),
+ (&#34;c&#34;, &#34;d&#34;, &#34;follow&#34;),
+ (&#34;c&#34;, &#34;g&#34;, &#34;friend&#34;),
+ (&#34;d&#34;, &#34;a&#34;, &#34;follow&#34;),
+ (&#34;d&#34;, &#34;g&#34;, &#34;friend&#34;),
+ (&#34;e&#34;, &#34;a&#34;, &#34;follow&#34;),
+ (&#34;e&#34;, &#34;d&#34;, &#34;follow&#34;),
+ (&#34;f&#34;, &#34;b&#34;, &#34;follow&#34;),
+ (&#34;f&#34;, &#34;c&#34;, &#34;follow&#34;),
+ (&#34;f&#34;, &#34;d&#34;, &#34;follow&#34;),
+ (&#34;g&#34;, &#34;a&#34;, &#34;friend&#34;),
+ (&#34;g&#34;, &#34;c&#34;, &#34;friend&#34;),
+ (&#34;g&#34;, &#34;d&#34;, &#34;friend&#34;)
+], [&#34;src&#34;, &#34;dst&#34;, &#34;relationship&#34;])
+
+# Create a GraphFrame
+g = GraphFrame(v, e)
+
+# *****START OF YOUR CODE (DO NOT DELETE/MODIFY THIS LINE)*****
+
+# Your answer should be a dataframe, which contains column
+# &#34;user&#34; and &#34;recommended user&#34;. Please rename the target 
+# column as &#34;user&#34; and &#34;recommended user&#34;.
+following = g.edges.filter(g.edges.relationship == &#34;follow&#34;).select(&#34;src&#34;, &#34;dst&#34;)
+
+friends = g.edges.filter(g.edges.relationship == &#34;friend&#34;).select(&#34;src&#34;, &#34;dst&#34;)
+
+following.createOrReplaceTempView(&#34;following&#34;)
+friends.createOrReplaceTempView(&#34;friends&#34;)
+v.createOrReplaceTempView(&#34;vertices&#34;)
+
+
+recommend = spark.sql(&#34;&#34;&#34;
+    SELECT DISTINCT
+        v1.name AS user,
+        v2.name AS `recommended user`
+    FROM
+        vertices v1
+    JOIN
+        following f1 ON v1.id = f1.src
+    JOIN
+        vertices v3 ON f1.dst = v3.id
+    JOIN
+        friends fr ON v3.id = fr.src
+    JOIN
+        vertices v2 ON fr.dst = v2.id
+    LEFT JOIN
+        following f2 ON v1.id = f2.src AND v2.id = f2.dst
+    LEFT JOIN
+        friends fr2 ON 
+            (v1.id = fr2.src AND v2.id = fr2.dst) OR 
+            (v1.id = fr2.dst AND v2.id = fr2.src)
+    WHERE
+        v1.id != v2.id  -- User and recommended user must be different
+        AND f2.dst IS NULL  -- User is not already following the recommended user
+        AND fr2.src IS NULL -- User and recommended user are not already friends
+&#34;&#34;&#34;)
+
+# *****END OF YOUR CODE (DO NOT DELETE/MODIFY THIS LINE)*****
+
+
+result = recommend.rdd.map(lambda x: (x[&#34;user&#34;], x[&#34;recommended user&#34;])).sortBy(lambda x: (x[0],x[1])).collect()
+
+print(result)
+      &lt;/textarea&gt;
+  &lt;span class=&#34;cm-editor-exit-message capa-message&#34; id=&#34;cm-editor-exit-message-c08be5ae76c343db9846fa61c85059ec_2_1&#34;&gt;
+    Press ESC then TAB or click outside of the code editor to exit
+  &lt;/span&gt;
+
+  &lt;div class=&#34;grader-status&#34; tabindex=&#34;-1&#34;&gt;
+
+    
+
+&lt;span class=&#34;status correct&#34; id=&#34;status_c08be5ae76c343db9846fa61c85059ec_2_1&#34; data-tooltip=&#34;This answer is correct.&#34;&gt;
+  &lt;span class=&#34;sr&#34;&gt;correct&lt;/span&gt;&lt;span class=&#34;status-icon&#34; aria-hidden=&#34;true&#34;/&gt;
+&lt;/span&gt;
+
+
+
+
+    &lt;p class=&#34;debug&#34;&gt;correct&lt;/p&gt;
+  &lt;/div&gt;
+
+  &lt;span id=&#34;answer_c08be5ae76c343db9846fa61c85059ec_2_1&#34;/&gt;
+
+  &lt;div class=&#34;external-grader-message&#34;&gt;
+    
+&lt;div class=&#34;test&#34;&gt;
+&lt;header&gt;Test results&lt;/header&gt;
+  &lt;section&gt;
+    &lt;div class=&#34;shortform&#34;&gt;
+    CORRECT
+    &lt;/div&gt;
+    &lt;div class=&#34;longform&#34;&gt;
+      
+      
+  &lt;div class=&#34;result-output result-correct&#34;&gt;
+    &lt;h4&gt;Compare the output of your program with the sample solution.&lt;/h4&gt;
+    &lt;pre&gt;&lt;p&gt;Compare the output of your code with our reference code with index 0 to 5(not including 5).&lt;/p&gt;&lt;/pre&gt;
+    &lt;dl&gt;
+    &lt;dt&gt;Output:&lt;/dt&gt;
+    &lt;dd class=&#34;result-actual-output&#34;&gt;
+       &lt;pre&gt;[(&#39;David&#39;, &#39;Charlie&#39;), (&#39;Esther&#39;, &#39;Charlie&#39;), (&#39;Esther&#39;, &#39;Gabby&#39;), (&#39;Fanny&#39;, &#39;Alice&#39;), (&#39;Fanny&#39;, &#39;Gabby&#39;)]&lt;/pre&gt;
+       &lt;/dd&gt;
+    &lt;/dl&gt;
+  &lt;/div&gt;
+
+    &lt;/div&gt;
+  &lt;/section&gt;
+&lt;/div&gt;
+
+  &lt;/div&gt;
+&lt;/div&gt;&lt;/div&gt;
+&lt;/div&gt;
+  &lt;div class=&#34;action&#34;&gt;
+    &lt;input type=&#34;hidden&#34; name=&#34;problem_id&#34; value=&#34;L4-4&#34; /&gt;
+
+    &lt;div class=&#34;problem-action-buttons-wrapper&#34;&gt;
+      &lt;span class=&#34;problem-action-button-wrapper&#34;&gt;
+          &lt;button type=&#34;button&#34; class=&#34;show problem-action-btn btn-link btn-small&#34; aria-describedby=&#34;c08be5ae76c343db9846fa61c85059ec-problem-title&#34;&gt;&lt;span class=&#34;show-label&#34;&gt;Show answer&lt;/span&gt;&lt;/button&gt;
+      &lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;submit-attempt-container&#34;&gt;
+      &lt;button type=&#34;button&#34; class=&#34;submit btn-brand&#34; data-submitting=&#34;Submitting&#34; data-value=&#34;Submit&#34; data-should-enable-submit-button=&#34;False&#34; aria-describedby=&#34;submission_feedback_c08be5ae76c343db9846fa61c85059ec&#34; disabled&gt;
+          &lt;span class=&#34;submit-label&#34;&gt;Submit&lt;/span&gt;
+      &lt;/button&gt;
+
+          &lt;button class=&#34;submit-cta-link-button btn-link btn-small&#34; onclick=&#34;emit_event({&amp;#39;event_name&amp;#39;: &amp;#39;post_event&amp;#39;, &amp;#39;post_data&amp;#39;: {&amp;#39;body_params&amp;#39;: {&amp;#39;course_id&amp;#39;: &amp;#39;course-v1:HKUSTx+MSBD5003x+2T2024&amp;#39;}, &amp;#39;url&amp;#39;: &amp;#39;https://courses.edx.org/api/course_experience/v1/reset_course_deadlines&amp;#39;}, &amp;#39;research_event_data&amp;#39;: {&amp;#39;block_id&amp;#39;: &amp;#39;block-v1:HKUSTx+MSBD5003x+2T2024+type@problem+block@c08be5ae76c343db9846fa61c85059ec&amp;#39;, &amp;#39;location&amp;#39;: &amp;#39;problem-view&amp;#39;}})&#34;&gt;
+            Try again (3 attempts remaining)
+          &lt;/button&gt;
+          &lt;span class=&#34;submit-cta-description&#34; tabindex=&#34;0&#34; role=&#34;note&#34; aria-label=&#34;description&#34;&gt;
+            &lt;span data-tooltip=&#34;You have used 2 of 5 attempts for this problem. &lt;b&gt;It looks like you missed some important deadlines based on our suggested schedule.&lt;/b&gt; To keep yourself on track, you can update this schedule and shift the past due assignments into the future. Don’t worry—you won’t lose any of the progress you’ve made when you shift your due dates.&#34; data-tooltip-show-on-click=&#34;true&#34;
+              class=&#34;fa fa-info-circle fa-lg&#34; aria-hidden=&#34;true&#34;&gt;
+            &lt;/span&gt;
+          &lt;/span&gt;
+          &lt;span class=&#34;sr&#34;&gt;(You have used 2 of 5 attempts for this problem. &lt;b&gt;It looks like you missed some important deadlines based on our suggested schedule.&lt;/b&gt; To keep yourself on track, you can update this schedule and shift the past due assignments into the future. Don’t worry—you won’t lose any of the progress you’ve made when you shift your due dates.)&lt;/span&gt;
+      &lt;div class=&#34;submission-feedback cta-enabled&#34; id=&#34;submission_feedback_c08be5ae76c343db9846fa61c85059ec&#34;&gt;
+        &lt;span class=&#34;sr&#34;&gt;Some problems have options such as save, reset, hints, or show answer. These options follow the Submit button.&lt;/span&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+    
+
+
+&lt;div class=&#34;notification warning notification-gentle-alert
+      is-hidden&#34;
+     tabindex=&#34;-1&#34;&gt;
+    &lt;span class=&#34;icon fa fa-exclamation-circle&#34; aria-hidden=&#34;true&#34;&gt;&lt;/span&gt;
+    &lt;span class=&#34;notification-message&#34; aria-describedby=&#34;c08be5ae76c343db9846fa61c85059ec-problem-title&#34;&gt;
+    &lt;/span&gt;
+    &lt;div class=&#34;notification-btn-wrapper&#34;&gt;
+        &lt;button type=&#34;button&#34; class=&#34;btn btn-default btn-small notification-btn review-btn sr&#34;&gt;Review&lt;/button&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+    
+
+
+&lt;div class=&#34;notification warning notification-save
+      is-hidden&#34;
+     tabindex=&#34;-1&#34;&gt;
+    &lt;span class=&#34;icon fa fa-save&#34; aria-hidden=&#34;true&#34;&gt;&lt;/span&gt;
+    &lt;span class=&#34;notification-message&#34; aria-describedby=&#34;c08be5ae76c343db9846fa61c85059ec-problem-title&#34;&gt;None
+    &lt;/span&gt;
+    &lt;div class=&#34;notification-btn-wrapper&#34;&gt;
+        &lt;button type=&#34;button&#34; class=&#34;btn btn-default btn-small notification-btn review-btn sr&#34;&gt;Review&lt;/button&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+    
+    
+
+
+&lt;div class=&#34;notification general notification-show-answer
+      is-hidden&#34;
+     tabindex=&#34;-1&#34;&gt;
+    &lt;span class=&#34;icon fa fa-info-circle&#34; aria-hidden=&#34;true&#34;&gt;&lt;/span&gt;
+    &lt;span class=&#34;notification-message&#34; aria-describedby=&#34;c08be5ae76c343db9846fa61c85059ec-problem-title&#34;&gt;Answers are displayed within the problem
+    &lt;/span&gt;
+    &lt;div class=&#34;notification-btn-wrapper&#34;&gt;
+        &lt;button type=&#34;button&#34; class=&#34;btn btn-default btn-small notification-btn review-btn sr&#34;&gt;Review&lt;/button&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+
+&lt;script&gt;
+    function emit_event(message) {
+        parent.postMessage(message, &#39;*&#39;);
+    }
+&lt;/script&gt;
+"
+     data-graded="True">
+    <p class="loading-spinner">
+        <i class="fa fa-spinner fa-pulse fa-2x fa-fw"></i>
+        <span class="sr">Loading&hellip;</span>
+    </p>
+</div>
+
+</div>
+
+    </div>
+</div>
+
+
+
+  
+  <script type="text/javascript">
+    (function (require) {
+        require(['https://prod\u002Dedx\u002Dedxapp\u002Dassets.edx\u002Dcdn.org/static/js/dateutil_factory.05a361148818.js?raw'], function () {
+          require(['js/dateutil_factory'], function (DateUtilFactory) {
+            
+    DateUtilFactory.transform('.localized-datetime');
+
+          });
+        });
+    }).call(this, require || RequireJS.require);
+  </script>
+
+
+<script>
+    function emit_event(message) {
+        parent.postMessage(message, '*');
+    }
+</script>
+
+</div>
+
+      </main>
+  </section>
+</div>
+    
+
+
+
+
+<div class="wrapper-utility edx-notes-visibility hidden">
+  <span class="action-toggle-message" aria-live="polite"></span>
+  <button class="utility-control utility-control-button action-toggle-notes is-disabled is-active">
+    <span class="icon fa fa-pencil" aria-hidden="true"></span>
+    <span class="utility-control-label sr">Hide notes</span>
+  </button>
+</div>
+
+
+  
+  <script type="text/javascript">
+    (function (require) {
+        require(['https://prod\u002Dedx\u002Dedxapp\u002Dassets.edx\u002Dcdn.org/static/js/edxnotes/views/notes_visibility_factory.8da063f73456.js?raw'], function () {
+          require(['js/edxnotes/views/notes_visibility_factory'], function (NotesVisibilityFactory) {
+            
+    NotesVisibilityFactory.ToggleVisibilityView(
+        true,
+        '/courses/course\u002Dv1:HKUSTx+MSBD5003x+2T2024/edxnotes/visibility/',
+        true
+    );
+
+          });
+        });
+    }).call(this, require || RequireJS.require);
+  </script>
+
+
+
+<script type="text/javascript">
+  (function() {
+    // If this view is rendered in an iframe within the learning microfrontend app
+    // it will report the height of its contents to the parent window when the
+    // document loads, window resizes, or DOM mutates.
+    if (window !== window.parent) {
+      document.body.className += ' view-in-mfe';
+      var lastHeight = window.offsetHeight;
+      var lastWidth = window.offsetWidth;
+      var contentElement = document.getElementById('content');
+
+      function dispatchResizeMessage(event) {
+        // Note: event is actually an Array of MutationRecord objects when fired from the MutationObserver
+        var isLoadEvent = event.type === 'load';
+        var newHeight = contentElement.offsetHeight;
+        var newWidth = contentElement.offsetWidth;
+        if (!isLoadEvent && newWidth === lastWidth && newHeight === lastHeight) {
+            // Monitor when any anchor tag is clicked, it is checked to make sure
+            // it is referencing an element's id or name (not an external website). If
+            // the href attribute is an id or name, the page will scroll the id or name.
+            $('a').on("click", function(event){
+              if ($(this).attr('href')[0] === '#') {
+                var targetId = $(this).attr('href');
+                // Checks if the href attribute is auto scrolling video transcripts.
+                // The scroll behavior for transcript scrolling requires the viewport
+                // to stay in relatively the same position so viewing of the video
+                // is not disrupted.
+                if ($(this).attr('class') === 'transcript-start'||$(this).attr('class') === 'transcript-end') {
+                  var target = $(targetId)[0];
+                  event.preventDefault();
+                  target.scrollIntoView({
+                    block: 'nearest',
+                  });
+                  target.focus();
+                } else {
+                  var targetName = $(this).attr('href').slice(1);
+                  // Checks if the target uses an id or name.
+                  var target = $(targetId)[0] || document.getElementsByName(targetName)[0];
+                  // The scroll behavior fro all other types of href's will scroll
+                  // the target to the top of the page
+                  if (target) {
+                    event.preventDefault();
+                    target.scrollIntoView({
+                      block: 'start',
+                    });
+                    target.focus();
+                  }
+                }
+              }
+            })
+          return;
+        }
+        // Monitor for messages and checks if the message contains an id. If
+        // there is an id, then the location of the selected focus element
+        // is sent through its offset attribute. The offset will allow the
+        // page to scroll to the location of the focus element so that it is
+        // at the top of the page. Unique ids and names are required for
+        // proper scrolling.
+        window.addEventListener('message', function (event) {
+          if (event.data.hashName) {
+            var targetId = event.data.hashName;
+            var targetName = event.data.hashName.slice(1);
+            // Checks if the target uses an id or name to focus and gets offset.
+            var targetOffset = $(targetId).offset() || $(document.getElementsByName(targetName)[0]).offset();
+            window.parent.postMessage({ 'offset': targetOffset.top }, document.referrer);
+          }
+        })
+
+        window.parent.postMessage({
+            type: 'plugin.resize',
+            payload: {
+              width: newWidth,
+              height: newHeight,
+            }
+          }, document.referrer
+        );
+
+        lastHeight = newHeight;
+        lastWidth = newWidth;
+
+        // Within the learning microfrontend the iframe resizes to match the
+        // height of this document and it should never scroll. It does scroll
+        // ocassionally when javascript is used to focus elements on the page
+        // before the parent iframe has been resized to match the content
+        // height. This window.scrollTo is an attempt to keep the content at the
+        // top of the page. See TNL-7094
+        window.scrollTo(0, 0);
+      }
+
+      // Create an observer instance linked to the callback function
+      const observer = new MutationObserver(dispatchResizeMessage);
+
+      // Start observing the target node for configured mutations
+      observer.observe(document.body, { attributes: true, childList: true, subtree: true });
+
+      window.addEventListener('load', dispatchResizeMessage);
+
+      const resizeObserver = new ResizeObserver(dispatchResizeMessage);
+      resizeObserver.observe(document.body);
+    }
+  }());
+</script>
+
+      
+    </div>
+
+
+
+  
+  
+  <script type="text/javascript" src="https://prod-edx-edxapp-assets.edx-cdn.org/static/common/js/vendor/jquery.scrollTo.d45857185e4d.js" async></script>
+  <script type="text/javascript" src="https://prod-edx-edxapp-assets.edx-cdn.org/static/js/vendor/flot/jquery.flot.d3d45ff0c6a8.js" async></script>
+
+  
+    
+<script type="text/javascript" src="https://prod-edx-edxapp-assets.edx-cdn.org/static/js/lms-courseware.9517dcd2081d.js" charset="utf-8"></script>
+
+
+
+    
+
+
+
+
+<script type="text/javascript">
+    // Fast Preview was introduced in 2.5. However, it
+    // causes undesirable flashing/font size changes when
+    // MathJax is used for interactive preview (equation editor).
+    // Setting processSectionDelay to 0 (see below) fully eliminates
+    // fast preview, but to reduce confusion, we are also setting
+    // the option as displayed in the context menu to false.
+    // When upgrading to 2.6, check if this variable name changed.
+    window.MathJax = {
+      menuSettings: {CHTMLpreview: false}
+    };
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    messageStyle: "none",
+    CommonHTML: { linebreaks: { automatic: true } },
+    SVG: { linebreaks: { automatic: true } },
+    "HTML-CSS": { linebreaks: { automatic: true } },
+    tex2jax: {
+      inlineMath: [
+        ["\\(","\\)"],
+        ['[mathjaxinline]','[/mathjaxinline]']
+      ],
+      displayMath: [
+        ["\\[","\\]"],
+        ['[mathjax]','[/mathjax]']
+      ]
+    }
+  });
+</script>
+<script type="text/x-mathjax-config">
+
+  // In order to eliminate all flashing during interactive
+  // preview, it is necessary to set processSectionDelay to 0
+  // (remove delay between input and output phases). This
+  // effectively disables fast preview, regardless of
+  // the fast preview setting as shown in the context menu.
+  MathJax.Hub.processSectionDelay = 0;
+
+  MathJax.Hub.signal.Interest(function(message) {
+    if(message[0] === "End Math") {
+        set_mathjax_display_div_settings();
+    }
+  });
+  function set_mathjax_display_div_settings() {
+    $('.MathJax_Display').each(function( index ) {
+      this.setAttribute('tabindex', '0');
+      this.setAttribute('aria-live', 'off');
+      this.removeAttribute('role');
+      this.removeAttribute('aria-readonly');
+    });
+  }
+</script>
+
+<script type="text/javascript">
+    // Activating Mathjax accessibility files
+    window.MathJax = {
+        menuSettings: {
+            collapsible: true,
+            autocollapse: false,
+            explorer: true
+        }
+    };
+    window.addEventListener('resize', MJrenderer);
+
+    let t = -1;
+    let delay = 1000;
+    let oldWidth = document.documentElement.scrollWidth;
+    function MJrenderer() {
+      // don't rerender if the window is the same size as before
+      if (t >= 0) {
+        window.clearTimeout(t);
+      }
+      if (oldWidth !== document.documentElement.scrollWidth) {
+        t = window.setTimeout(function() {
+          oldWidth = document.documentElement.scrollWidth;
+          MathJax.Hub.Queue(
+            ["Rerender", MathJax.Hub],
+          );
+          t = -1;
+        }, delay);
+      }
+    };
+</script>
+
+<!-- This must appear after all mathjax-config blocks, so it is after the imports from the other templates.
+     It can't be run through static.url because MathJax uses crazy url introspection to do lazy loading of
+     MathJax extension libraries -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/mathjax@2.7.5/MathJax.js?config=TeX-MML-AM_SVG"></script>
+
+
+<script src='https://prod-edx-edxapp-assets.edx-cdn.org/static/bundles/HtmlBlockDisplay.6d81ee65906c24aa0dc7.47ed42fefb2e.js' type='application/javascript'></script>
+<script src='https://prod-edx-edxapp-assets.edx-cdn.org/static/bundles/XModuleShim.f78dfb4f07eae2a41a0c.d54694be61dc.js' type='application/javascript'></script>
+<script src='https://prod-edx-edxapp-assets.edx-cdn.org/static/bundles/ProblemBlockDisplay.0d6e10aabc21778c1aae.3cf7129fbf6a.js' type='application/javascript'></script>
+<script src='https://prod-edx-edxapp-assets.edx-cdn.org/static/bundles/VerticalStudentView.5d3d99a7cc1da5c3c40e.e50e49e1753e.js' type='application/javascript'></script>
+
+
+
+  
+
+
+    <!-- begin segment footer -->
+    <script type="text/javascript">
+        $(window).load(function() {
+            analytics.identify(
+                "11737509",
+                {
+                    email: "mankoyiu@gmail.com",
+                    username: "charlesyiu"
+                },
+                {
+                    integrations: {
+                        // Disable MailChimp because we don't want to update the user's email
+                        // and username in MailChimp on every page load. We only need to capture
+                        // this data on registration/activation.
+                        MailChimp: false
+                    }
+                }
+            );
+        });
+    </script>
+    <!-- end segment footer -->
+
+  <script type="text/javascript" src="https://prod-edx-edxapp-assets.edx-cdn.org/static/js/vendor/noreferrer.aa62a3e70ffa.js" charset="utf-8"></script>
+  <script type="text/javascript" src="https://prod-edx-edxapp-assets.edx-cdn.org/static/js/utils/navigation.5a78fd05918f.js" charset="utf-8"></script>
+  <script type="text/javascript" src="https://prod-edx-edxapp-assets.edx-cdn.org/static/js/header/header.5d27dd11cfda.js"></script>
+  
+  <script type="text/javascript" src="https://prod-edx-edxapp-assets.edx-cdn.org/static/js/src/jquery_extend_patch.54dddef28d15.js"></script>
+  <div id="lean_overlay"></div>
+
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"rayId":"9246e648b97f853f","serverTiming":{"name":{"cfExtPri":true,"cfL4":true,"cfSpeedBrain":true,"cfCacheStatus":true}},"version":"2025.1.0","token":"7e7e0d8a3be64c7ba2cf01bcb532c718"}' crossorigin="anonymous"></script>
+</body>
+</html>
+
+
